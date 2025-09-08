@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResumeCraft Pro | Professional Resume Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./styles/resume.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-content">
+        <h1>ResumeCrafter</h1>
+        <p>Create a stunning, professional resume that gets you noticed by employers</p>
+      </div>
+    </div>
+    
+    <div class="form-container">
+      <!-- Step Indicator -->
+      <div class="step-indicator">
+        <div class="step active">
+          <div class="step-number">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="step-label">Personal</div>
+        </div>
+        <div class="step">
+          <div class="step-number">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="step-label">Experience</div>
+        </div>
+        <div class="step">
+          <div class="step-number">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="step-label">Education</div>
+        </div>
+        <div class="step">
+          <div class="step-number">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="step-label">Review</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-progress" style="width: 25%;"></div>
+      </div>
+      
+      <!-- Personal Information Section -->
+      <div class="form-section">
+        <h2 class="section-title">
+          <i class="fas fa-user-circle"></i> Personal Information
+        </h2>
+        <p class="section-description">Start with the basics - your name, contact details, and professional photo.</p>
+        
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <div class="file-upload">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Drag & drop your photo or click to browse</p>
+              <span class="file-info">JPG or PNG (Max 2MB, 300x300 recommended)</span>
+              <input type="file" id="profileImage" accept="image/*">
+            </div>
+            <div id="profileImageError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please upload a professional photo
+            </div>
+            
+            <div class="image-preview" id="imagePreview">
+              <img id="previewImage" src="#" alt="Profile Image Preview">
+              <span class="remove-image" id="removeImage">
+                <i class="fas fa-trash-alt"></i> Remove photo
+              </span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="firstName">First Name <span class="label-optional">(Required)</span></label>
+            <div class="input-wrapper">
+              <input type="text" id="firstName" placeholder="John" required>
+            </div>
+            <div id="firstNameError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please enter your first name
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="lastName">Last Name <span class="label-optional">(Required)</span></label>
+            <div class="input-wrapper">
+              <input type="text" id="lastName" placeholder="Doe" required>
+            </div>
+            <div id="lastNameError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please enter your last name
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address <span class="label-optional">(Required)</span></label>
+            <div class="input-wrapper">
+              <input type="email" id="email" placeholder="john@example.com" required>
+            </div>
+            <div id="emailError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please enter a valid email
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="label-optional">(Required)</span></label>
+            <div class="input-wrapper">
+              <input type="tel" id="phone" placeholder="(123) 456-7890" required>
+            </div>
+            <div id="phoneError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please enter a valid phone number
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="location">Location <span class="label-optional">(City, Country)</span></label>
+            <div class="input-wrapper">
+              <input type="text" id="location" placeholder="New York, USA">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="jobTitle">Current Job Title</label>
+            <div class="input-wrapper">
+              <input type="text" id="jobTitle" placeholder="e.g. Senior Software Engineer">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- About Me Section -->
+      <div class="form-section">
+        <h2 class="section-title">
+          <i class="fas fa-user-tie"></i> About Me
+        </h2>
+        <p class="section-description">Tell employers about yourself, your strengths, and what makes you unique.</p>
+        
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label for="personalSummary">Personal Summary <span class="label-optional">(Required)</span></label>
+            <textarea id="personalSummary" placeholder="Describe your personality, work ethic, and key strengths..." required></textarea>
+            <div id="personalSummaryError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please write a personal summary
+            </div>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="keyStrengths">Key Strengths <span class="label-optional">(Required)</span></label>
+            <textarea id="keyStrengths" placeholder="List your top 3-5 strengths that make you stand out..." required></textarea>
+            <div id="keyStrengthsError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please list your key strengths
+            </div>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="hobbiesInterests">Hobbies & Interests</label>
+            <textarea id="hobbiesInterests" placeholder="Share your hobbies and interests that showcase your personality..."></textarea>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Professional Summary Section -->
+      <div class="form-section">
+        <h2 class="section-title">
+          <i class="fas fa-file-alt"></i> Professional Summary
+        </h2>
+        <p class="section-description">Write a compelling summary that highlights your skills, experience, and career goals.</p>
+        
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label for="objective">Career Objective <span class="label-optional">(Required)</span></label>
+            <textarea id="objective" placeholder="Experienced software developer seeking a challenging role in..." required></textarea>
+            <div id="objectiveError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please write your career objective
+            </div>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="languages">Languages <span class="label-optional">(Required)</span></label>
+            <textarea id="languages" placeholder="English (Fluent), Spanish (Intermediate), French (Basic)..." required></textarea>
+            <div id="languagesError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please list the languages you speak
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Education Section -->
+      <div class="form-section">
+        <h2 class="section-title">
+          <i class="fas fa-graduation-cap"></i> Education
+        </h2>
+        <p class="section-description">List your educational background, starting with the most recent degree.</p>
+        
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <div class="dynamic-field">
+              <div class="field-header">
+                <div class="field-title">
+                  <i class="fas fa-university"></i> Education <span class="label-optional">(Required)</span>
+                </div>
+                <div class="remove-field">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+              <input type="text" class="education-degree" placeholder="Degree (e.g., Bachelor of Science)" required>
+              <input type="text" class="education-institution" placeholder="Institution Name" required>
+              <input type="text" class="education-duration" placeholder="Duration (e.g., 2015-2019)" required>
+              <textarea class="education-details" placeholder="Additional details (honors, coursework, etc.)"></textarea>
+            </div>
+            
+            <button type="button" class="add-field-btn" id="addEducationBtn">
+              <i class="fas fa-plus"></i> Add Education
+            </button>
+            <div id="educationError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please add at least one education entry
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Work Experience Section -->
+      <div class="form-section">
+        <h2 class="section-title">
+          <i class="fas fa-briefcase"></i> Work Experience
+        </h2>
+        <p class="section-description">Showcase your professional journey and achievements.</p>
+        
+        <div class="experience-toggle">
+          <button type="button" class="toggle-option active" id="experiencedBtn">I have work experience</button>
+          <button type="button" class="toggle-option" id="fresherBtn">I'm a fresher</button>
+        </div>
+        
+        <div class="form-grid">
+          <div class="form-group full-width" id="experienceFields">
+            <div class="dynamic-field">
+              <div class="field-header">
+                <div class="field-title">
+                  <i class="fas fa-building"></i> Experience
+                </div>
+                <div class="remove-field">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+              <input type="text" class="experience-title" placeholder="Job Title">
+              <input type="text" class="experience-company" placeholder="Company Name">
+              <input type="text" class="experience-duration" placeholder="Duration (e.g., Jan 2020 - Present)">
+              <textarea class="experience-description" placeholder="Responsibilities and achievements (bullet points work best)"></textarea>
+            </div>
+            
+            <button type="button" class="add-field-btn" id="addExperienceBtn">
+              <i class="fas fa-plus"></i> Add Experience
+            </button>
+          </div>
+          
+          <div class="form-group full-width fresher-fields" id="fresherFields" style="display: none;">
+            <div class="dynamic-field">
+              <div class="field-header">
+                <div class="field-title">
+                  <i class="fas fa-laptop-code"></i> Internships/Training
+                </div>
+                <div class="remove-field">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+              <input type="text" class="internship-title" placeholder="Internship/Training Title">
+              <input type="text" class="internship-organization" placeholder="Organization Name">
+              <input type="text" class="internship-duration" placeholder="Duration (e.g., Summer 2022)">
+              <textarea class="internship-description" placeholder="What you learned and accomplished"></textarea>
+            </div>
+            
+            <div class="dynamic-field">
+              <div class="field-header">
+                <div class="field-title">
+                  <i class="fas fa-project-diagram"></i> Academic Projects
+                </div>
+                <div class="remove-field">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+              <input type="text" class="project-title" placeholder="Project Title">
+              <input type="text" class="project-duration" placeholder="Duration (e.g., 2022)">
+              <textarea class="project-description" placeholder="Project description and your role"></textarea>
+              <input type="text" class="project-technologies" placeholder="Technologies used (comma separated)">
+            </div>
+            
+            <button type="button" class="add-field-btn" id="addFresherExperienceBtn">
+              <i class="fas fa-plus"></i> Add Another Internship/Project
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Skills Section -->
+      <div class="form-section">
+        <h2 class="section-title">
+          <i class="fas fa-code"></i> Skills & Competencies
+        </h2>
+        <p class="section-description">Highlight your key skills and areas of expertise.</p>
+        
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <div class="dynamic-field">
+              <div class="field-header">
+                <div class="field-title">
+                  <i class="fas fa-tags"></i> Skill Category <span class="label-optional">(Required)</span>
+                </div>
+                <div class="remove-field">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+              <input type="text" class="skill-category" placeholder="Category (e.g., Programming Languages)" required>
+              <textarea class="skill-items" placeholder="List skills (comma separated, e.g., JavaScript, Python, Java)" required></textarea>
+            </div>
+            
+            <button type="button" class="add-field-btn" id="addSkillBtn">
+              <i class="fas fa-plus"></i> Add Skill Category
+            </button>
+            <div id="skillsError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please add at least one skill category
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projects Section -->
+      <div class="form-section">
+        <h2 class="section-title">
+          <i class="fas fa-project-diagram"></i> Projects
+        </h2>
+        <p class="section-description">Showcase your best work and contributions.</p>
+        
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <div class="dynamic-field">
+              <div class="field-header">
+                <div class="field-title">
+                  <i class="fas fa-star"></i> Project <span class="label-optional">(Required)</span>
+                </div>
+                <div class="remove-field">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+              <input type="text" class="project-name" placeholder="Project Name" required>
+              <input type="text" class="project-duration" placeholder="Duration (e.g., 2020)" required>
+              <textarea class="project-description" placeholder="Project description and your role" required></textarea>
+              <input type="text" class="project-technologies" placeholder="Technologies used (comma separated)">
+              <input type="text" class="project-link" placeholder="Project URL (optional)">
+            </div>
+            
+            <button type="button" class="add-field-btn" id="addProjectBtn">
+              <i class="fas fa-plus"></i> Add Project
+            </button>
+            <div id="projectsError" class="error-message">
+              <i class="fas fa-exclamation-circle"></i> Please add at least one project
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Form Controls -->
+      <div class="form-controls">
+        <button type="button" class="btn btn-primary" id="generateResumeBtn">
+          <i class="fas fa-file-export"></i> Generate Resume
+          <div class="spinner" id="generateSpinner"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Action Button -->
+  <div class="fab" id="scrollToTopBtn">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast toast-success" id="successToast">
+    <i class="fas fa-check-circle"></i>
+    <span>Resume generated successfully!</span>
+  </div>
+
+  <div class="toast toast-error" id="errorToast">
+    <i class="fas fa-exclamation-circle"></i>
+    <span>Please fill all required fields</span>
+  </div>
+
+  <script src="./script/resume.js"></script>
+</body>
+</html>

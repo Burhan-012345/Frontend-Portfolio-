@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 11 | Digital Innovation Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-cubes"></i> Group 11
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+                    <ul class="nav-links">
+                        <li><a href="#about" class="active">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div class="mobile-nav">
+                    <div class="hamburger-menu" id="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-menu-links">
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="bg-element bg-element-1"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="section__text__p1">Hello, we are</p>
+                    <h1 class="title">Group <span class="gradient-text">11</span></h1>
+                    <p class="section__text__p2">Innovative developers crafting exceptional digital experiences with
+                        cutting-edge technology and creative solutions.</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-1" onclick="window.open('./assets/resume-example.pdf')">
+                            <i class="fas fa-eye"></i> View Portfolio
+                        </button>
+                        <button class="btn btn-color-2" onclick="location.href='./#contact'">
+                            <i class="fas fa-paper-plane"></i> Contact Us
+                        </button>
+                    </div>
+                    <div id="socials-container">
+                        <a href="https://linkedin.com/" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://dribbble.com/" class="social-icon" aria-label="Dribbble">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/Grp11.jpg" alt="Group 11 team" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="bg-element bg-element-2"></div>
+        <div class="container">
+            <p class="section__text__p1">Get To Know More</p>
+            <h1 class="title">About <span class="gradient-text">Us</span></h1>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img src="./assets/grp11.jpg" alt="Group 11 team" class="about-pic" />
+                </div>
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <i class="fas fa-briefcase icon"></i>
+                            <h3>Experience</h3>
+                            <p>5+ years <br />Web Development</p>
+                        </div>
+                        <div class="details-container">
+                            <i class="fas fa-graduation-cap icon"></i>
+                            <h3>Education</h3>
+                            <p>B.Sc. Computer Science<br />M.Sc. Software Engineering</p>
+                        </div>
+                        <div class="details-container">
+                            <i class="fas fa-project-diagram icon"></i>
+                            <h3>Projects</h3>
+                            <p>30+ Completed<br />Web Applications</p>
+                        </div>
+                        <div class="details-container">
+                            <i class="fas fa-trophy icon"></i>
+                            <h3>Awards</h3>
+                            <p>5 Design Awards<br />3 Hackathon Wins</p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p>
+                            We re a passionate team of developers specializing in creating modern,
+                            high-performance web applications. Our approach combines innovative design
+                            with robust technical implementation to deliver exceptional digital experiences.
+                        </p>
+                        <p>
+                            With expertise across the full stack, we bridge the gap between beautiful
+                            interfaces and powerful functionality. We stay at the forefront of technology
+                            to implement cutting-edge solutions for our clients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <p class="section__text__p1">Explore Our</p>
+            <h1 class="title">Technical <span class="gradient-text">Skills</span></h1>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <div>
+                        <h2 class="experience-sub-title">Frontend Development</h2>
+                        <div class="article-container">
+                            <article>
+                                <i class="fas fa-check-circle icon"></i>
+                                <div>
+                                    <h3>React.js</h3>
+                                    <p>Hooks, Context API, Redux Toolkit</p>
+                                </div>
+                            </article>
+                            <article>
+                                <i class="fas fa-check-circle icon"></i>
+                                <div>
+                                    <h3>Vue.js</h3>
+                                    <p>Vuex, Vue Router, Composition API</p>
+                                </div>
+                            </article>
+                            <article>
+                                <i class="fas fa-check-circle icon"></i>
+                                <div>
+                                    <h3>TypeScript</h3>
+                                    <p>Static typing, Interfaces, Generics</p>
+                                </div>
+                            </article>
+                            <article>
+                                <i class="fas fa-check-circle icon"></i>
+                                <div>
+                                    <h3>CSS/SASS</h3>
+                                    <p>Animations, Flexbox, Grid, BEM</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="experience-sub-title">Backend & DevOps</h2>
+                        <div class="article-container">
+                            <article>
+                                <i class="fas fa-check-circle icon"></i>
+                                <div>
+                                    <h3>Node.js</h3>
+                                    <p>Express, REST APIs, GraphQL</p>
+                                </div>
+                            </article>
+                            <article>
+                                <i class="fas fa-check-circle icon"></i>
+                                <div>
+                                    <h3>Docker</h3>
+                                    <p>Containerization, Kubernetes</p>
+                                </div>
+                            </article>
+                            <article>
+                                <i class="fas fa-check-circle icon"></i>
+                                <div>
+                                    <h3>AWS</h3>
+                                    <p>EC2, S3, Lambda, RDS</p>
+                                </div>
+                            </article>
+                            <article>
+                                <i class="fas fa-check-circle icon"></i>
+                                <div>
+                                    <h3>CI/CD</h3>
+                                    <p>GitHub Actions, Jenkins</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <p class="section__text__p1">Get in Touch</p>
+            <h1 class="title">Contact <span class="gradient-text">Us</span></h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <p><a href="mailto:contact@group11.dev">contact@group11.dev</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <i class="fab fa-linkedin-in contact-icon"></i>
+                    <p><a href="https://www.linkedin.com/company/group11">linkedin.com/company/group11</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <i class="fab fa-github contact-icon"></i>
+                    <p><a href="https://github.com/group11">github.com/group11</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <nav class="footer-nav">
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">© 2023 Group 11. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Button -->
+    <button class="floating-btn" onclick="location.href='Dashboard.html'">
+        <i class="fas fa-rocket"></i>
+        <span>Get Started</span>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="./script/index.js"></script>
+</body>
+</html>
